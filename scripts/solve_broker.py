@@ -30,10 +30,10 @@ def main():
     # solve challenge
     print_state(setup_contract, broker_contract, pair_contract, weth_contract, token_contract, attacker)
 
-    weth_contract.approve(router_contract, 2 ** 256 -1, {"from": attacker})
-    token_contract.approve(router_contract, 2 ** 256 -1, {"from": attacker})
-    weth_contract.approve(broker_contract, 2 ** 256 -1, {"from": attacker})
-    token_contract.approve(broker_contract, 2 ** 256 -1, {"from": attacker})
+    weth_contract.approve(router_contract, 2 ** 256 - 1, {"from": attacker})
+    # token_contract.approve(router_contract, 2 ** 256 - 1, {"from": attacker})
+    # weth_contract.approve(broker_contract, 2 ** 256 - 1, {"from": attacker})
+    token_contract.approve(broker_contract, 2 ** 256 - 1, {"from": attacker})
 
     weth_contract.deposit({"from": attacker, "value": Web3.toWei(50, 'ether')})
 
