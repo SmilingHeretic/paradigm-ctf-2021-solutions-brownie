@@ -4,7 +4,7 @@ from brownie import (
     accounts,
     config,
     interface,
-    SetupHello,
+    HelloSetup,
     Hello
 )
 from scripts.helpful_scripts import (
@@ -19,7 +19,7 @@ def main():
     player = get_account(index=1)
 
     # setup challenge
-    setup_contract = SetupHello.deploy({"from": deployer})
+    setup_contract = HelloSetup.deploy({"from": deployer})
     hello_contract = Hello.at(setup_contract.hello())
 
     # solve challenge
