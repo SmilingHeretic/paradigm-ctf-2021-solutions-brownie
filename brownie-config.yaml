@@ -9,7 +9,7 @@ compiler:
       - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0'
 dotenv: .env
 networks:
-  default: mainnet-fork-dev-latest
+  default: mainnet-fork-dev
   mainnet-fork-dev:
     verify: False
     cmd_settings:
